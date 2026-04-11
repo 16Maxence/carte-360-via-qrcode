@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Carte de visite 360°</title>
+
+    <!-- Import du viewer 3D -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        model-viewer {
+            width: 90vw;
+            height: 90vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <model-viewer src="carte.glb"
+                  auto-rotate
+                  camera-controls
+                  shadow-intensity="1"
+                  exposure="1.1"
+                  ar
+                  ar-modes="webxr scene-viewer quick-look">
+    </model-viewer>
+
+</body>
+</html>
